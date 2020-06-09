@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <title>AUW IT Support Ticket</title>
+    </head>
+
+    <body>
+        <header>
+            <img src="" alt="Tech Support Icon">
+            <h2>Tech Support Ticket</h2>
+        </header>
+
+        <form id="techForm" action="#" enctype="text/plain" method="post">
+            <label for="storeNumber">Store Number:</label>
+            <select id="storeNumber">
+                <option value="Corporate Office">Corporate Office</option>
+                <option value="Store 1 - Hialeah">1 - Hialeah</option>
+                <option value="Store 2 - Calle Ocho">2 - Calle Ocho</option>
+                <option value="Store 3 - Pembroke East">3 - Pembroke East</option>
+                <option value="Store 4 - Cutler Bay">4 - Cutler Bay</option>
+                <option value="Store 5 - Hialeah Gardens">5 - Hialeah Gardens</option>
+                <option value="Store 6 - Naranja">6 - Naranja</option>
+                <option value="Store 7 - Kendall">7 - Kendall</option>
+                <option value="Store 8 - North Miami">8 - North Miami</option>
+                <option value="Store 9 - Pembroke West">9 - Pembroke West</option>
+                <option value="Store 10 - Plantation">10 - Plantation</option>
+                <option value="Store 11 - Little Havana">11 - Little Havana</option>
+            </select>
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title"></br>
+            <label for="contactPerson">Contact Person</label>
+            <input type="text" id="contactPerson" name="contactPerson">
+            <label for="issueDate">When did issue start?</label>
+            <input type="date" id="issueDate" name="issueDate">
+            <!-- Section for Devices -->
+            <h2>What Item is Experiencing the issue</h2>
+            <!-- COMPUTERS -->
+            <fieldset>
+                <legend>Computers</legend>
+                <input type="checkbox" id="register1" name="computers[]" value="Register 1">
+                <label for="register1">Register 1</label>
+                <input type="checkbox" id="register2" name="computers[]" value="Register 2">
+                <label for="register2">Register 2</label>
+                <input type="checkbox" id="register3" name="computers[]" value="Register 3">
+                <label for="register3">Register 3</label>
+                <input type="checkbox" id="register4" name="computers[]" value="Register 4">
+                <label for="register4">Register 4</label><br>
+                <input type="checkbox" id="b2bPc" name="computers[]" value="B2B PC">
+                <label for="b2bPc">B2B PC</label>
+                <input type="checkbox" id="mangPc" name="computers[]" value="Manager PC">
+                <label for="mangPc">Manager PC</label>
+                <input type="checkbox" id="embPc" name="computers[]" value="Embroidery PC">
+                <label for="embPc">Embroidery PC</label>
+                <input type="checkbox" id="silkPc" name="computers[]" value="Silk Screen PC">
+                <label for="silkPc">Silk Screen PC</label><br>
+                <input type="checkbox" id="receivePc" name="computers[]" value="Receiving PC">
+                <label for="receivePc">Receiving PC</label><br>
+                <input type="checkbox" id="otherPc" name="computers[]" value="Other = " onclick="document.getElementById('otherPcText').focus();"> 
+                <label for="otherPc">Other</label>
+                <input type="text" id="otherPcText" name="otherPcText">
+            </fieldset>
+            <!-- PRINTERS -->
+            <fieldset>
+                <legend>Printers / Scanners</legend>
+                <input type="checkbox" id="thermalPrinter" name="printers[]" value="Thermal Printer POSX">
+                <label for="thermalPrinter">Thermal Printer (POS-X)</label>
+                <input type="checkbox" id="printScan" name="printers[]" value="Printer / Scanner">
+                <label for="printScan">Store Printer/Scanner</label><br>
+                <input type="checkbox" id="pinPad" name="printers[]" value="PIN Pad">
+                <label for="pinPad">Signature / PIN pad</label>
+                <input type="checkbox" id="regscan" name="printers[]" value="Register scanner">
+                <label for="regscan">Register Scanner</label>
+                <input type="checkbox" id="otherPrinter" name="printers[]" value="Other = " onclick="document.getElementById('otherPrinterText').focus();">
+                <label for="otherPrinter">Other</label>
+                <input type="text" id="otherPrinterText" name="otherPrinterText"><br>
+                <label for="modelNumber">Model Number</label>
+                <input type="text" id="modelNumber" name="modelNumber">
+                <label for="serialNumber">Serial Number</label>
+                <input type="text" id="serialNumber" name="serialNumber">
+            </fieldset>
+
+            <!-- PHONES -->
+            <fieldset>
+                <legend>Phones</legend>
+                <input type="checkbox" name="cisco"> Cisco Phone 
+                <input type="checkbox" name="panasonic"> Panasonic Phone
+                <input type="checkbox" name="vonageApp"> Vonage App</br>
+                Phone Location:
+                <select id="phoneLocation">
+                    <option>Store Front</option>
+                    <option>Manager</option>
+                    <option>Embroidery</option>
+                </select>
+                Extension Number: <input type="text" name="extensionNumber"></br>
+                Serial Number <input type="text" name="serialPhone">
+                Mac Address <input type="text" name="macAddress">
+            </fieldset>
+            <!-- UNIFORM SOLUTION -->
+            <fieldset>
+                <legend>The Uniform Solution</legend>
+                <input type="checkbox" name="databaseUsw"> Database Message Pop Up
+                <input type="checkbox" name="otherUsw"> Other <input type="text" name="otherUswText">
+            </fieldset>
+            <!-- STEPS TAKEN BY USER -->
+            <fieldset>
+                <legend>Describe Issue and check steps that you have completed to resolve it</legend>
+                <input type="checkbox" name="checkConnections"> Check Connections
+                <input type="checkbox" name="ContactIsp"> Contacted Internet Service Provider</br>
+                <input type="checkbox" name="resetModem"> Reset Modem
+                <input type="checkbox" name="itemOn"> Make sure item is On</br>
+                <input type="checkbox" name="resetPc"> Reset PC
+                <input type="checkbox" name="resetPhone"> Reset Phone
+            </fieldset>
+            <!-- COMMENTS -->
+            <textarea id="comments" name="comments" cols="80" rows="10" placeholder="Type your comments here"></textarea>
+            <p>Important: Please remember to include pictures of any error messages or codes that the system is giving you.</p>
+            <!-- <input type="submit" value="Create Ticket"> -->
+            <button onclick="sendForm();">Create Ticket</button>
+        </form>
+
+        <script src="tech-form.js"></script>
+
+    </body>
+</html>
