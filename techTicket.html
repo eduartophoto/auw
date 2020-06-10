@@ -34,9 +34,21 @@
                 <option value="Store 9 - Pembroke West">9 - Pembroke West</option>
                 <option value="Store 10 - Plantation">10 - Plantation</option>
                 <option value="Store 11 - Little Havana">11 - Little Havana</option>
+                <option value="Store 12 - Doral Warehouse">12 - Doral Warehouse</option>
+                <option value="Store 13 - Fort Myers">13 - Fort Myers</option>
+                <option value="Store 14 - Hialeah Mobile Store">14 - Hialeah Mobile Store</option>
+                <option value="Store 15 - Melbourne">15 - Melbourne</option>
+                <option value="Store 16 - Orlando">16 - Orlando</option>
+                <option value="Store 17 - Jacksonville">17 - Jacksonville</option>
+                <option value="Store 18 - Mobile Hospital">18 - Mobile Hospital</option>
+                <option value="Store 19 - Uniform Distributor">19 - Uniform Distributor</option>
+                <option value="Store 21 - Hialeah Warehouse">21 - Hialeah Warehouse</option>
+                <option value="Store 22 - Doral Mobile Truck">22 - Doral Mobile Truck</option>
+                <option value="Store 23 - Tampa">23 - Tampa</option>
+                <option value="Store 24 - Margate">24 - Margate</option>
             </select>
             <label for="title">Title:</label>
-            <input type="text" id="title" name="title"></br>
+            <input type="text" id="title" name="title"><br>
             <label for="contactPerson">Contact Person</label>
             <input type="text" id="contactPerson" name="contactPerson">
             <label for="issueDate">When did issue start?</label>
@@ -64,7 +76,7 @@
                 <label for="silkPc">Silk Screen PC</label><br>
                 <input type="checkbox" id="receivePc" name="computers[]" value="Receiving PC">
                 <label for="receivePc">Receiving PC</label><br>
-                <input type="checkbox" id="otherPc" name="computers[]" value="Other = " onclick="document.getElementById('otherPcText').focus();"> 
+                <input type="checkbox" id="otherPc" name="computers[]" value="Other = " onclick="document.getElementById('otherPcText').focus()"> 
                 <label for="otherPc">Other</label>
                 <input type="text" id="otherPcText" name="otherPcText">
             </fieldset>
@@ -79,7 +91,7 @@
                 <label for="pinPad">Signature / PIN pad</label>
                 <input type="checkbox" id="regscan" name="printers[]" value="Register scanner">
                 <label for="regscan">Register Scanner</label>
-                <input type="checkbox" id="otherPrinter" name="printers[]" value="Other = " onclick="document.getElementById('otherPrinterText').focus();">
+                <input type="checkbox" id="otherPrinter" name="printers[]" value="Other = " onclick="document.getElementById('otherPrinterText').focus()">
                 <label for="otherPrinter">Other</label>
                 <input type="text" id="otherPrinterText" name="otherPrinterText"><br>
                 <label for="modelNumber">Model Number</label>
@@ -91,40 +103,48 @@
             <!-- PHONES -->
             <fieldset>
                 <legend>Phones</legend>
-                <input type="checkbox" name="cisco"> Cisco Phone 
-                <input type="checkbox" name="panasonic"> Panasonic Phone
-                <input type="checkbox" name="vonageApp"> Vonage App</br>
-                Phone Location:
-                <select id="phoneLocation">
-                    <option>Store Front</option>
-                    <option>Manager</option>
-                    <option>Embroidery</option>
-                </select>
-                Extension Number: <input type="text" name="extensionNumber"></br>
-                Serial Number <input type="text" name="serialPhone">
-                Mac Address <input type="text" name="macAddress">
+                <input type="checkbox" id="cisco" name="phones[]" value="Cisco Phone">
+                <label for="cisco">Cisco Phone</label> 
+                <input type="checkbox" id="panasonic" name="phones[]" value="Panasonic Phone">
+                <label for="panasonic">Panasonic Phone</label>
+                <input type="checkbox" id="vonageApp" name="phones[]" value="Vonage App">
+                <label for="vonageApp">Vonage App</label><br>
+                <label for="extensionNumber">Extension Number</label>
+                <input type="text" id="extensionNumber" name="extensionNumber"><br>
+                <label for="serialPhone">Serial Number</label>
+                <input type="text" id="serialPhone" name="serialPhone">
+                <label for="macAddress">Mac Address</label>
+                <input type="text" id="macAddress" name="macAddress">
             </fieldset>
             <!-- UNIFORM SOLUTION -->
             <fieldset>
                 <legend>The Uniform Solution</legend>
-                <input type="checkbox" name="databaseUsw"> Database Message Pop Up
-                <input type="checkbox" name="otherUsw"> Other <input type="text" name="otherUswText">
+                <input type="checkbox" id="databaseUsw" name="usw[]">
+                <label for="databaseUsw">Database Message Pop Up</label>
+                <input type="checkbox" id="otherUsw" name="usw[]" onclick="document.getElementById('otherUswText').focus()">
+                <label for="otherUsw">Other</label>
+                <input type="text" id="otherUswText" name="otherUswText">
             </fieldset>
             <!-- STEPS TAKEN BY USER -->
             <fieldset>
                 <legend>Describe Issue and check steps that you have completed to resolve it</legend>
-                <input type="checkbox" name="checkConnections"> Check Connections
-                <input type="checkbox" name="ContactIsp"> Contacted Internet Service Provider</br>
-                <input type="checkbox" name="resetModem"> Reset Modem
-                <input type="checkbox" name="itemOn"> Make sure item is On</br>
-                <input type="checkbox" name="resetPc"> Reset PC
-                <input type="checkbox" name="resetPhone"> Reset Phone
+                <input type="checkbox" id="checkConnections" name="issues[]" value="Checked all Connections">
+                <label for="checkConnections">Check Connections</label> 
+                <input type="checkbox" id="contactIsp" name="issues[]" value="Contacted Internet Provider"> <label for="contactIsp">Contacted Internet Service Provider</label><br>
+                <input type="checkbox" id="resetModem" name="issues[]" value="Reset Modem">
+                <label for="resetModem">Reset Modem</label>
+                <input type="checkbox" id="itemOn" name="issues[]" value="Checked if Item is On">
+                <label for="itemOn">Make sure item is On</label><br>
+                <input type="checkbox" id="resetPc" name="issues[]" value="Reset PC">
+                <label for="resetPc">Reset PC</label>
+                <input type="checkbox" id="resetPhone" name="issues[]" value="Reset Phone">
+                <label for="resetPhone">Reset Phone</label>
             </fieldset>
             <!-- COMMENTS -->
             <textarea id="comments" name="comments" cols="80" rows="10" placeholder="Type your comments here"></textarea>
             <p>Important: Please remember to include pictures of any error messages or codes that the system is giving you.</p>
             <!-- <input type="submit" value="Create Ticket"> -->
-            <button onclick="sendForm();">Create Ticket</button>
+            <button onclick="sendForm()">Create Ticket</button>
         </form>
 
         <script src="tech-form.js"></script>
