@@ -1,4 +1,5 @@
 
+
 function sendForm() {
         var dateStarted = document.getElementById("issueDate").value;
         var storeNumber = document.getElementById("storeNumber").value;
@@ -14,8 +15,27 @@ function sendForm() {
         var extensionNumber = "Extension Number: " + document.getElementById("extensionNumber").value + " ";
         var serialPhone = "Serial Number: " + document.getElementById("serialPhone").value + " ";
         var macAddress = "Mac Address: " + document.getElementById("macAddress").value + " ";
+        var usw = document.getElementsByName("usw[]");
+        var otherUswText = document.getElementById("otherUswText").value;
+        var issues = document.getElementsByName("issues[]");
         var bodyText = document.getElementById("comments").value;
 
+        if(dateStarted == 0) {
+                alert("Please enter a Date");
+                return false;
+        }else if(storeNumber == 0) {
+                alert("Please select a Store");
+                return false;
+        }else if(customSubject == 0) {
+                alert("Please enter a title for the ticket");
+                return false;
+        }else if(submitBy == 0) {
+                alert("Please add a Contact Person");
+                return false;
+        }else if(bodyText == 0) {
+                alert("Please add comments to Ticket");
+                return false;
+        }
 
         // Computers checkbox selection
         var compChecked = "";
@@ -41,12 +61,28 @@ function sendForm() {
                 }
         }
 
+        // USW checkbox selection
+        var uswChecked = "";        
+        for(var l=0; l<usw.length; l++) {
+                if(usw[l].checked) {
+                        uswChecked += "%0D%0A" + usw[l].value;
+                }
+        }
+
+        // Steps checkbox selection
+        var issuesChecked = "";        
+        for(var m=0; m<issues.length; m++) {
+                if(issues[m].checked) {
+                        issuesChecked += "%0D%0A" + issues[m].value;
+                }
+        }
+
         // Comments 
         if(bodyText == 0) {
                 var bodyText = "No comments reported";
         }
 
-        var sendMail = "mailto:eduardo55322823+2xj1usic4jeb0mrdjbzc@boards.trello.com?subject=" + "(" + dateStarted + ")" + " / " + storeNumber + " / " +  customSubject + "&body=" + "PLEASE REMEMBER TO ATTACH IMAGES SHOWING ANY ERROR MESSAGES!!!" + "%0D%0A" + "Ticket Submitted By: " + submitBy + "%0D%0A %0D%0A" + "-COMPUTERS-" + compChecked + otherPc + "%0D%0A %0D%0A" + "-PRINTERS / SCANNERS" + printChecked + otherPrinter + "%0D%0A" + modelNumber + "%0D%0A" + serialNumber + "%0D%0A %0D%0A" + "-PHONES-" + phoneChecked + "%0D%0A" + extensionNumber + "%0D%0A" + serialPhone + "%0D%0A" + macAddress + "%0D%0A %0D%0A" + "TICKET DETAILS: " + "%0D%0A" + bodyText + "%0D%0A %0D%0A";
+        var sendMail = "mailto:eduardo55322823+2xj1usic4jeb0mrdjbzc@boards.trello.com?subject=" + "(" + dateStarted + ")" + " / " + storeNumber + " / " +  customSubject + "&body=" + "PLEASE REMEMBER TO ATTACH IMAGES SHOWING ANY ERROR MESSAGES!!!" + "%0D%0A" + "Ticket Submitted By: " + submitBy + "%0D%0A %0D%0A" + "-COMPUTERS-" + compChecked + otherPc + "%0D%0A %0D%0A" + "-PRINTERS / SCANNERS-" + printChecked + otherPrinter + "%0D%0A" + modelNumber + "%0D%0A" + serialNumber + "%0D%0A %0D%0A" + "-PHONES-" + phoneChecked + "%0D%0A" + extensionNumber + "%0D%0A" + serialPhone + "%0D%0A" + macAddress + "%0D%0A %0D%0A" + "-UNIFORM SOLUTION ISSUES-" + uswChecked + otherUswText + "%0D%0A %0D%0A" + "-STEPS PERFORMED BY USER-" + issuesChecked + "%0D%0A %0D%0A" + "TICKET DETAILS: " + "%0D%0A" + bodyText + "%0D%0A %0D%0A";
 
         window.open(sendMail);
 }
