@@ -8,11 +8,22 @@ html {
 .wrapper-form {
     max-width: 800px;
     margin: auto;
+    padding: 30px;
+    background-color: rgba(242, 242, 242, .6);
+}
+
+.top-header {
+    background-color: #103b5c;
+}
+
+.top-header--title {
+    color: #fff;
+    text-align: center;
 }
 
 .title {
     font-weight: 500;
-    color: #084f80;
+    color: #103b5c;
 }
 
 .title--small {
@@ -21,7 +32,7 @@ html {
 }
 
 fieldset {
-    border: 2px solid #08803a;
+    border: 2px solid #103b5c;
     margin-bottom: 12px;
     padding: 15px;
 }
@@ -42,8 +53,8 @@ legend {
   }
 
 .button--go {
-    background-color: #2aba4f;
-    border: 1px solid #2aba4f;
+    background-color: #449d44;
+    border: 1px solid #449d44;
     border-radius: 12px;
 }
 
@@ -51,4 +62,10 @@ legend {
     background-color: #f81717;
     border: 1px solid #f81717;
     border-radius: 12px;
+}
+
+.foot {
+    background-color: rgba(242, 242, 242, .6);
+    margin-top: 30px;
+    padding: 30px;
 }
