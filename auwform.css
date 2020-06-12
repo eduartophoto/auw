@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
+
+html {
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+}
+
+.wrapper-form {
+    max-width: 800px;
+    margin: auto;
+}
+
+.title {
+    font-weight: 500;
+    color: #084f80;
+}
+
+.title--small {
+    font-weight: 300;
+    color: #084f80;
+}
+
+fieldset {
+    border: 2px solid #08803a;
+    margin-bottom: 12px;
+    padding: 15px;
+}
+
+legend {
+    font-weight: 300;
+    color: #084f80;
+}
+
+.button {
+    color: #fff;
+    padding: 12px;
+}
+
+.button:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+.button--go {
+    background-color: #2aba4f;
+    border: 1px solid #2aba4f;
+    border-radius: 12px;
+}
+
+.button--stop {
+    background-color: #f81717;
+    border: 1px solid #f81717;
+    border-radius: 12px;
+}

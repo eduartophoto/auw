@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
+
+
+.about-wrapper {
+	max-width: 1000px;
+	margin: auto;
+	font-family: 'Roboto', sans-serif;
+}
+
+.header-2, h2 {
+	font-weight: 500;
+	color:	#103b5c;
+	font-size: 32px;
+	margin: 0;
+}
+
+.header-3, h3 {
+	font-family: Roboto, sans-serif;
+	font-weight: 500;
+	color:	#103b5c;
+	font-size: 28px;
+	text-align: center;
+	margin-top: 60px;
+}
+
+.header-4, h4 {
+	color:	#959595;
+	font-weight: 400;
+	font-size: 20px;
+	margin:	0;
+}
+
+h5 {
+	font-weight: 500;
+	color:	#103b5c;
+	font-size: 18px;
+}
+
+.icons {
+	margin-bottom: 60px;
+}
+
+.list-unstyled {
+	list-style: none;
+	text-align: center;
+}
+
+li {
+	display: inline;
+	padding: 1px;
+}
+
+.dot-line {
+	width: 70px!important;
+    display: inline-block!important;
+    background-color: transparent!important;
+    border-bottom: 1px dashed #fff!important;
+}
+
+.row-auw {
+	display: block;
+}
+
+.row-contact {
+  display: block;
+  margin-top: 50px;
+}
+
+.paraText {
+	position: relative;
+	float: left;
+	max-width: 470px;
+	padding-right: 15px;
+}
+
+
+@media only screen and (max-width: 767px){
+
+.dot-line{
+	width: 2px;
+	display:none;
+}
+
+.paraText {
+	float: none;
+	padding-bottom: 20px;
+	max-width: none;
+}
+
+.row-contact {
+  display: block;
+  margin-top: 10px;
+}

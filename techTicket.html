@@ -10,6 +10,9 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
 
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="auwform.css">
+
         <title>AUW IT Support Ticket</title>
     </head>
 
@@ -19,7 +22,10 @@
             <h2>Tech Support Ticket</h2>
         </header>
 
+        <div class="wrapper-form">
+
         <form id="techForm" action="#" enctype="text/plain" method="post" onsubmit="return false">
+            <div class="section section--one">
             <label for="storeNumber">Store Number:</label>
             <select id="storeNumber">
                 <option value="">Select a Store</option>
@@ -62,8 +68,9 @@
             <input type="text" id="contactPerson" name="contactPerson">
             <label for="issueDate">When did issue start?</label>
             <input type="date" id="issueDate" name="issueDate">
+            </div>
             <!-- Section for Devices -->
-            <h2>What Item is Experiencing the issue</h2>
+            <h2 class="title">What Item is Experiencing the issue</h2>
             <!-- COMPUTERS -->
             <fieldset>
                 <legend>Computers</legend>
@@ -150,13 +157,17 @@
                 <label for="resetPhone">Reset Phone</label>
             </fieldset>
             <!-- COMMENTS -->
-            <h3>Please Include Details Below</h3>
+            <h3 class="title--small">Please Include Details Below</h3>
             <textarea id="comments" name="comments" cols="80" rows="10" placeholder="Type your comments here"></textarea>
             <p>Important: Please remember to include pictures of any error messages or codes that the system is giving you.</p>
             <!-- <input type="submit" value="Create Ticket"> -->
-            <button onclick="sendForm()">Create Ticket</button>
-            <button onclick="reset()">Reset Form</button>
+            <button class="button button--go" onclick="sendForm()">Create Ticket</button>
+            <button class="button button--stop" onclick="reset()">Reset Form</button>
         </form>
+
+        </div>
+
+        <footer>All Uniform Wear    Questions: techsupport@alluniformwear.com  xt: 9106</footer>
 
         <script src="tech-form.js"></script>
 
