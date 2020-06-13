@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
 
-html {
-    font-family: Roboto, sans-serif;
+body {
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
 }
 
@@ -29,6 +29,19 @@ html {
 .title--small {
     font-weight: 300;
     color: #084f80;
+}
+
+.clmn__6 {
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.section__1--label {
+    display: block;
+}
+
+.section__1--input {
+    width: 100%;
 }
 
 fieldset {
@@ -68,4 +81,30 @@ legend {
     background-color: rgba(242, 242, 242, .6);
     margin-top: 30px;
     padding: 30px;
+}
+
+@media (min-width: 800px) {
+    .section__1::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    .section__1--label {
+        display: inline-block;
+    }
+
+    .section__1--input {
+        width: auto;
+    }
+
+    .clmn__6 {
+        float: left;
+        width: 50%;
+        padding-bottom: 5px;
+    }
+    
+    .clmn__6--right {
+        text-align: right;
+    }
 }

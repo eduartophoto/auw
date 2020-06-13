@@ -27,50 +27,63 @@
         <div class="wrapper-form">
 
         <form id="techForm" action="#" enctype="text/plain" method="post" onsubmit="return false">
-            <div class="section section--one">
-            <label for="storeNumber">Store Number:</label>
-            <select id="storeNumber">
-                <option value="">Select a Store</option>
-                <option value="Corporate Office">Corporate Office</option>
-                <option value="Store 1 - Hialeah">1 - Hialeah</option>
-                <option value="Store 2 - Calle Ocho">2 - Calle Ocho</option>
-                <option value="Store 3 - Pembroke East">3 - Pembroke East</option>
-                <option value="Store 4 - Cutler Bay">4 - Cutler Bay</option>
-                <option value="Store 5 - Hialeah Gardens">5 - Hialeah Gardens</option>
-                <option value="Store 6 - Naranja">6 - Naranja</option>
-                <option value="Store 7 - Kendall">7 - Kendall</option>
-                <option value="Store 8 - North Miami">8 - North Miami</option>
-                <option value="Store 9 - Pembroke West">9 - Pembroke West</option>
-                <option value="Store 10 - Plantation">10 - Plantation</option>
-                <option value="Store 11 - Little Havana">11 - Little Havana</option>
-                <option value="Store 12 - Doral Warehouse">12 - Doral Warehouse</option>
-                <option value="Store 13 - Fort Myers">13 - Fort Myers</option>
-                <option value="Store 14 - Hialeah Mobile Store">14 - Hialeah Mobile Store</option>
-                <option value="Store 15 - Melbourne">15 - Melbourne</option>
-                <option value="Store 16 - Orlando">16 - Orlando</option>
-                <option value="Store 17 - Jacksonville">17 - Jacksonville</option>
-                <option value="Store 18 - Mobile Hospital">18 - Mobile Hospital</option>
-                <option value="Store 19 - Uniform Distributor">19 - Uniform Distributor</option>
-                <option value="Store 21 - Hialeah Warehouse">21 - Hialeah Warehouse</option>
-                <option value="Store 22 - Doral Mobile Truck">22 - Doral Mobile Truck</option>
-                <option value="Store 23 - Tampa">23 - Tampa</option>
-                <option value="Store 24 - Margate">24 - Margate</option>
-                <option value="Store 26 - Jensen Beach">26 - Jensen Beach</option>
-                <option value="Store 27 - West Palm Beach">27 - West Palm Beach</option>
-                <option value="Store 28 - Tallahassee">28 - Tallahassee</option>
-                <option value="Store 29 - Las Vegas">29 - Las Vegas</option>
-                <option value="Store 32 - Kissimmee">32 - Kissimmee</option>
-                <option value="Store 33 - Charlotte">33 - Charlotte</option>
-                <option value="Store 34 - San Antonio">34 - San Antonio</option>
-                <option value="Store 36 - North Nevada">36 - North Nevada</option>
-            </select>
-            <label for="title">Title:</label>
-            <input type="text" id="title" name="title"><br>
-            <label for="contactPerson">Contact Person</label>
-            <input type="text" id="contactPerson" name="contactPerson">
-            <label for="issueDate">When did issue start?</label>
-            <input type="date" id="issueDate" name="issueDate">
+            <div class="section__1">
+                <div class="row">
+                    <div class="clmn__6">
+                        <label class="section__1--label" for="storeNumber">Store Number:</label>
+                        <select class="section__1--input" id="storeNumber">
+                            <option value="">Select a Store</option>
+                            <option value="Corporate Office">Corporate Office</option>
+                            <option value="Store 1 - Hialeah">1 - Hialeah</option>
+                            <option value="Store 2 - Calle Ocho">2 - Calle Ocho</option>
+                            <option value="Store 3 - Pembroke East">3 - Pembroke East</option>
+                            <option value="Store 4 - Cutler Bay">4 - Cutler Bay</option>
+                            <option value="Store 5 - Hialeah Gardens">5 - Hialeah Gardens</option>
+                            <option value="Store 6 - Naranja">6 - Naranja</option>
+                            <option value="Store 7 - Kendall">7 - Kendall</option>
+                            <option value="Store 8 - North Miami">8 - North Miami</option>
+                            <option value="Store 9 - Pembroke West">9 - Pembroke West</option>
+                            <option value="Store 10 - Plantation">10 - Plantation</option>
+                            <option value="Store 11 - Little Havana">11 - Little Havana</option>
+                            <option value="Store 12 - Doral Warehouse">12 - Doral Warehouse</option>
+                            <option value="Store 13 - Fort Myers">13 - Fort Myers</option>
+                            <option value="Store 14 - Hialeah Mobile Store">14 - Hialeah Mobile Store</option>
+                            <option value="Store 15 - Melbourne">15 - Melbourne</option>
+                            <option value="Store 16 - Orlando">16 - Orlando</option>
+                            <option value="Store 17 - Jacksonville">17 - Jacksonville</option>
+                            <option value="Store 18 - Mobile Hospital">18 - Mobile Hospital</option>
+                            <option value="Store 19 - Uniform Distributor">19 - Uniform Distributor</option>
+                            <option value="Store 21 - Hialeah Warehouse">21 - Hialeah Warehouse</option>
+                            <option value="Store 22 - Doral Mobile Truck">22 - Doral Mobile Truck</option>
+                            <option value="Store 23 - Tampa">23 - Tampa</option>
+                            <option value="Store 24 - Margate">24 - Margate</option>
+                            <option value="Store 26 - Jensen Beach">26 - Jensen Beach</option>
+                            <option value="Store 27 - West Palm Beach">27 - West Palm Beach</option>
+                            <option value="Store 28 - Tallahassee">28 - Tallahassee</option>
+                            <option value="Store 29 - Las Vegas">29 - Las Vegas</option>
+                            <option value="Store 32 - Kissimmee">32 - Kissimmee</option>
+                            <option value="Store 33 - Charlotte">33 - Charlotte</option>
+                            <option value="Store 34 - San Antonio">34 - San Antonio</option>
+                            <option value="Store 36 - North Nevada">36 - North Nevada</option>
+                        </select>
+                    </div>
+                    <div class="clmn__6 clmn__6--right">
+                        <label class="section__1--label" for="title">Title:</label>
+                        <input class="section__1--input" type="text" id="title" name="title"><br>
+                    </div>    
+                </div>
+                <div class="row">        
+                    <div class="clmn__6">    
+                        <label class="section__1--label" for="contactPerson">Contact Person</label>
+                        <input class="section__1--input"class="section__1--input" type="text" id="contactPerson" name="contactPerson">
+                    </div>
+                    <div class="clmn__6 clmn__6--right">    
+                        <label class="section__1--label" for="issueDate">When did issue start?</label>
+                        <input class="section__1--input" type="date" id="issueDate" name="issueDate">
+                    </div>
+                </div>
             </div>
+
             <!-- Section for Devices -->
             <h2 class="title">What Item is Experiencing the issue</h2>
             <!-- COMPUTERS -->
