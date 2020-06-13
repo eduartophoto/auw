@@ -89,27 +89,47 @@
             <!-- COMPUTERS -->
             <fieldset>
                 <legend>Computers</legend>
-                <input type="checkbox" id="register1" name="computers[]" value="Register 1">
-                <label for="register1">Register 1</label>
-                <input type="checkbox" id="register2" name="computers[]" value="Register 2">
-                <label for="register2">Register 2</label>
-                <input type="checkbox" id="register3" name="computers[]" value="Register 3">
-                <label for="register3">Register 3</label>
-                <input type="checkbox" id="register4" name="computers[]" value="Register 4">
-                <label for="register4">Register 4</label><br>
-                <input type="checkbox" id="b2bPc" name="computers[]" value="B2B PC">
-                <label for="b2bPc">B2B PC</label>
-                <input type="checkbox" id="mangPc" name="computers[]" value="Manager PC">
-                <label for="mangPc">Manager PC</label>
-                <input type="checkbox" id="embPc" name="computers[]" value="Embroidery PC">
-                <label for="embPc">Embroidery PC</label>
-                <input type="checkbox" id="silkPc" name="computers[]" value="Silk Screen PC">
-                <label for="silkPc">Silk Screen PC</label><br>
-                <input type="checkbox" id="receivePc" name="computers[]" value="Receiving PC">
-                <label for="receivePc">Receiving PC</label><br>
-                <input type="checkbox" id="otherPc" name="computers[]" value="Other = " onclick="document.getElementById('otherPcText').focus()"> 
-                <label for="otherPc">Other</label>
-                <input type="text" id="otherPcText" name="otherPcText">
+                <div class="row">
+                    <div class="clmn__4--chk">
+                        <input type="checkbox" id="register1" name="computers[]" value="Register 1">
+                        <label for="register1">Register 1</label>
+                    </div>    
+                    <div class="clmn__4--chk">    
+                        <input type="checkbox" id="register2" name="computers[]" value="Register 2">
+                        <label for="register2">Register 2</label>
+                    </div>
+                    <div class="clmn__4--chk">
+                        <input type="checkbox" id="register3" name="computers[]" value="Register 3">
+                        <label for="register3">Register 3</label>
+                    </div>
+                    <div class="clmn__4--chk">
+                        <input type="checkbox" id="register4" name="computers[]" value="Register 4">
+                        <label for="register4">Register 4</label>                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="clmn__4--chk-big">
+                        <input type="checkbox" id="b2bPc" name="computers[]" value="B2B PC">
+                        <label for="b2bPc">B2B PC</label>
+                    </div>
+                    <div class="clmn__4--chk-big">    
+                        <input type="checkbox" id="mangPc" name="computers[]" value="Manager PC">
+                        <label for="mangPc">Manager PC</label>
+                    </div>
+                    <div class="clmn__4--chk-big">
+                        <input type="checkbox" id="embPc" name="computers[]" value="Embroidery PC">
+                        <label for="embPc">Embroidery PC</label>
+                    </div>
+                    <div class="clmn__4--chk-big">
+                        <input type="checkbox" id="receivePc" name="computers[]" value="Receiving PC">
+                        <label for="receivePc">Receiving PC</label><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="checkbox" id="otherPc" name="computers[]" value="Other = " onclick="document.getElementById('otherPcText').focus()"> 
+                    <label for="otherPc">Other</label>
+                    <input type="text" id="otherPcText" name="otherPcText">
+                </div>
             </fieldset>
             <!-- PRINTERS -->
             <fieldset>
