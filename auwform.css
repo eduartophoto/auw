@@ -12,13 +12,25 @@ body {
     background-color: rgba(242, 242, 242, .6);
 }
 
+.wrapper-form--head {
+    max-width: 800px;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
 .top-header {
     background-color: #103b5c;
 }
 
 .top-header--title {
     color: #fff;
-    text-align: center;
+}
+
+.top-header--img {
+    float: left;
+    padding-right: 15px;
 }
 
 .title {
@@ -29,6 +41,12 @@ body {
 .title--small {
     font-weight: 300;
     color: #084f80;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 .clmn__6 {
@@ -46,13 +64,25 @@ body {
 
 .clmn__4--chk {
     float: left;
-    width: 25%;
+    width: 50%;
     margin: 8px 0;
 }
 
-.clmn__4--chk-big {
+.clmn__2--chk {
     float: left;
     width: 50%;
+    margin: 8px 0;
+}
+
+.clmn__1--chk {
+    float: left;
+    width: 100%;
+    margin: 8px 0;
+}
+
+.clmn__1--chk-med {
+    float: left;
+    width: 100%;
     margin: 8px 0;
 }
 
@@ -62,10 +92,17 @@ fieldset {
     padding: 15px;
 }
 
-legend {
+.leg-title {
+    font-size: 1.5rem;
     font-weight: 300;
     color: #084f80;
 }
+
+.comments {
+    width: 100%;
+    resize: none;
+}
+
 
 .button {
     color: #fff;
@@ -97,7 +134,18 @@ legend {
     padding: 30px;
 }
 
+.wrapper-form--footer {
+    max-width: 800px;
+    margin: auto;
+    color: #fff;
+    padding: 30px;
+}
+
 @media (min-width: 800px) {
+    .section__1--input {
+        width: auto;
+    }
+
     .clmn__6 {
         float: left;
         width: 50%;
@@ -107,13 +155,22 @@ legend {
         text-align: right;
     }
 
-    .section__1--input {
-        width: auto;
-    }
 
-    .clmn__4--chk-big {
+    .clmn__4--chk {
         float: left;
         width: 25%;
+        margin: 8px 0;
+    }
+
+    .clmn__3--chk {
+        float: left;
+        width: 50%;
+        margin: 8px 0;
+    }
+
+    .clmn__1--chk-med {
+        float: left;
+        width: 50%;
         margin: 8px 0;
     }
 

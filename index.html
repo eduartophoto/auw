@@ -18,8 +18,8 @@
 
     <body>
         <header class="top-header">
-            <div>
-            <img src="" alt="Tech Support Icon">
+            <div class="wrapper-form--head">
+            <img class="top-header--img" src="images/tech-icon.png" alt="Tech Support Icon">
             <h2 class="top-header--title">Tech Support Ticket</h2>
             </div>
         </header>
@@ -88,7 +88,7 @@
             <h2 class="title">What Item is Experiencing the issue</h2>
             <!-- COMPUTERS -->
             <fieldset>
-                <legend>Computers</legend>
+                <legend class="leg-title">Computers</legend>
                 <div class="row">
                     <div class="clmn__4--chk">
                         <input type="checkbox" id="register1" name="computers[]" value="Register 1">
@@ -108,92 +108,157 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="clmn__4--chk-big">
+                    <div class="clmn__4--chk">
                         <input type="checkbox" id="b2bPc" name="computers[]" value="B2B PC">
                         <label for="b2bPc">B2B PC</label>
                     </div>
-                    <div class="clmn__4--chk-big">    
+                    <div class="clmn__4--chk">    
                         <input type="checkbox" id="mangPc" name="computers[]" value="Manager PC">
                         <label for="mangPc">Manager PC</label>
                     </div>
-                    <div class="clmn__4--chk-big">
+                    <div class="clmn__4--chk">
                         <input type="checkbox" id="embPc" name="computers[]" value="Embroidery PC">
                         <label for="embPc">Embroidery PC</label>
                     </div>
-                    <div class="clmn__4--chk-big">
+                    <div class="clmn__4--chk">
                         <input type="checkbox" id="receivePc" name="computers[]" value="Receiving PC">
                         <label for="receivePc">Receiving PC</label><br>
                     </div>
                 </div>
                 <div class="row">
-                    <input type="checkbox" id="otherPc" name="computers[]" value="Other = " onclick="document.getElementById('otherPcText').focus()"> 
-                    <label for="otherPc">Other</label>
-                    <input type="text" id="otherPcText" name="otherPcText">
+                    <div class="clmn__1--chk">
+                        <input type="checkbox" id="otherPc" name="computers[]" value="Other = " onclick="document.getElementById('otherPcText').focus()"> 
+                        <label for="otherPc">Other</label>
+                        <input type="text" id="otherPcText" name="otherPcText">
+                    </div>
                 </div>
             </fieldset>
             <!-- PRINTERS -->
             <fieldset>
-                <legend>Printers / Scanners</legend>
-                <input type="checkbox" id="thermalPrinter" name="printers[]" value="Thermal Printer POSX">
-                <label for="thermalPrinter">Thermal Printer (POS-X)</label>
-                <input type="checkbox" id="printScan" name="printers[]" value="Printer / Scanner">
-                <label for="printScan">Store Printer/Scanner</label><br>
-                <input type="checkbox" id="pinPad" name="printers[]" value="PIN Pad">
-                <label for="pinPad">Signature / PIN pad</label>
-                <input type="checkbox" id="regscan" name="printers[]" value="Register scanner">
-                <label for="regscan">Register Scanner</label>
-                <input type="checkbox" id="otherPrinter" name="printers[]" value="Other = " onclick="document.getElementById('otherPrinterText').focus()">
-                <label for="otherPrinter">Other</label>
-                <input type="text" id="otherPrinterText" name="otherPrinterText"><br>
-                <label for="modelNumber">Model Number</label>
-                <input type="text" id="modelNumber" name="modelNumber">
-                <label for="serialNumber">Serial Number</label>
-                <input type="text" id="serialNumber" name="serialNumber">
+                <legend class="leg-title">Printers / Scanners</legend>
+                <div class ="row">
+                    <div class="clmn__4--chk">
+                        <input type="checkbox" id="thermalPrinter" name="printers[]" value="Thermal Printer POSX">
+                        <label for="thermalPrinter">Thermal Printer</label>
+                    </div>    
+                    <div class="clmn__4--chk">    
+                        <input type="checkbox" id="printScan" name="printers[]" value="Printer / Scanner">
+                        <label for="printScan">Printer/Scanner</label><br>
+                    </div>
+                    <div class="clmn__4--chk">
+                        <input type="checkbox" id="pinPad" name="printers[]" value="PIN Pad">     
+                        <label for="pinPad">PIN pad</label>
+                    </div>
+                    <div class="clmn__4--chk">
+                        <input type="checkbox" id="regScan" name="printers[]" value="Barcode Scanner">     
+                        <label for="regScann">Barcode Scanner</label>
+                    </div>
+                </div>    
+                <div class="row">   
+                    <div class="clmn__1--chk">  
+                        <input type="checkbox" id="otherPrinter" name="printers[]" value="Other = " onclick="document.getElementById('otherPrinterText').focus()">
+                        <label for="otherPrinter">Other</label>
+                        <input type="text" id="otherPrinterText" name="otherPrinterText">
+                    </div>
+                </div>
+                <div class ="row">
+                    <div class="clmn__1--chk-med">
+                        <label for="modelNumber">Model Number</label>
+                        <input type="text" id="modelNumber" name="modelNumber">
+                    </div>
+                    <div class="clmn__1--chk-med">        
+                        <label for="serialNumber">Serial Number</label>
+                        <input type="text" id="serialNumber" name="serialNumber">
+                    </div>
+                </div>
             </fieldset>
 
             <!-- PHONES -->
             <fieldset>
-                <legend>Phones</legend>
-                <input type="checkbox" id="cisco" name="phones[]" value="Cisco Phone">
-                <label for="cisco">Cisco Phone</label> 
-                <input type="checkbox" id="panasonic" name="phones[]" value="Panasonic Phone">
-                <label for="panasonic">Panasonic Phone</label>
-                <input type="checkbox" id="vonageApp" name="phones[]" value="Vonage App">
-                <label for="vonageApp">Vonage App</label><br>
-                <label for="extensionNumber">Extension Number</label>
-                <input type="text" id="extensionNumber" name="extensionNumber"><br>
-                <label for="serialPhone">Serial Number</label>
-                <input type="text" id="serialPhone" name="serialPhone">
-                <label for="macAddress">Mac Address</label>
-                <input type="text" id="macAddress" name="macAddress">
+                <legend class="leg-title">Phones</legend>
+                <div class="row">
+                    <div class="clmn__4--chk">
+                        <input type="checkbox" id="cisco" name="phones[]" value="Cisco Phone">
+                        <label for="cisco">Cisco Phone</label>
+                    </div>
+                    <div class="clmn__4--chk">
+                        <input type="checkbox" id="panasonic" name="phones[]" value="Panasonic Phone">
+                        <label for="panasonic">Panasonic</label>
+                    </div>
+                    <div class="clmn__4--chk">
+                        <input type="checkbox" id="vonageApp" name="phones[]" value="Vonage App">
+                        <label for="vonageApp">Vonage App</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="clmn__1--chk">
+                        <label for="extensionNumber">Extension Number</label>
+                        <input type="text" id="extensionNumber" name="extensionNumber">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="clmn__1--chk-med">
+                        <label for="serialPhone">Serial Number</label>
+                        <input type="text" id="serialPhone" name="serialPhone">
+                    </div>
+                    <div class="clmn__1--chk-med">
+                        <label for="macAddress">Mac Address</label>
+                        <input type="text" id="macAddress" name="macAddress">
+                    </div>
+                </div>        
             </fieldset>
             <!-- UNIFORM SOLUTION -->
             <fieldset>
-                <legend>The Uniform Solution</legend>
-                <input type="checkbox" id="databaseUsw" name="usw[]" value="Database Message">
-                <label for="databaseUsw">Database Message Pop Up</label>
-                <input type="checkbox" id="otherUnif" name="usw[]" value="Other = " onclick="document.getElementById('otherUswText').focus()">
-                <label for="otherUnif">Other</label>
-                <input type="text" id="otherUswText" name="otherUswText">
+                <legend class="leg-title">The Uniform Solution</legend>
+                <div class="row">
+                    <div class="clmn__1--chk">
+                        <input type="checkbox" id="databaseUsw" name="usw[]" value="Database Message">
+                        <label for="databaseUsw">Database Message Pop Up</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="clmn__1--chk">
+                        <input type="checkbox" id="otherUnif" name="usw[]" value="Other = " onclick="document.getElementById('otherUswText').focus()">
+                        <label for="otherUnif">Other</label>
+                        <input type="text" id="otherUswText" name="otherUswText">
+                    </div>
+                </div>
             </fieldset>
             <!-- STEPS TAKEN BY USER -->
             <fieldset>
-                <legend>Describe Issue and check steps that you have completed to resolve it</legend>
-                <input type="checkbox" id="checkConnections" name="issues[]" value="Checked all Connections">
-                <label for="checkConnections">Check Connections</label> 
-                <input type="checkbox" id="contactIsp" name="issues[]" value="Contacted Internet Provider"> <label for="contactIsp">Contacted Internet Service Provider</label><br>
-                <input type="checkbox" id="resetModem" name="issues[]" value="Reset Modem">
-                <label for="resetModem">Reset Modem</label>
-                <input type="checkbox" id="itemOn" name="issues[]" value="Checked if Device is Turned On">
-                <label for="itemOn">Make sure device is Turned On</label><br>
-                <input type="checkbox" id="resetPc" name="issues[]" value="Reset PC">
-                <label for="resetPc">Reset PC</label>
-                <input type="checkbox" id="resetPhone" name="issues[]" value="Reset Phone">
-                <label for="resetPhone">Reset Phone</label>
+                <legend class="leg-title">Check steps you have completed</legend>
+                <div class="row">
+                    <div class="clmn__2--chk">
+                        <input type="checkbox" id="resetPc" name="issues[]" value="Reset PC">
+                        <label for="resetPc">Reset PC</label>
+                    </div>
+                    <div class="clmn__2--chk">    
+                        <input type="checkbox" id="resetPhone" name="issues[]" value="Reset Phone">
+                        <label for="resetPhone">Reset Phone</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="clmn__1--chk-med">
+                        <input type="checkbox" id="resetModem" name="issues[]" value="Reset Modem">
+                        <label for="resetModem">Reset Modem</label>
+                    </div>
+                    <div class="clmn__1--chk-med">       
+                        <input type="checkbox" id="checkConnections" name="issues[]" value="Checked all Connections">
+                        <label for="checkConnections">Check Connections</label>
+                    </div>
+                <div class="row">
+                    <div class="clmn__1--chk-med">
+                        <input type="checkbox" id="contactIsp" name="issues[]" value="Contacted Internet Provider"> <label for="contactIsp">Contacted Internet Service Provider</label>
+                    </div>
+                    <div class="clmn__1--chk-med">
+                        <input type="checkbox" id="itemOn" name="issues[]" value="Checked if Device is Turned On">
+                        <label for="itemOn">Make sure device is Turned On</label>
+                    </div>
+                </div>
             </fieldset>
             <!-- COMMENTS -->
             <h3 class="title--small">Please Include Details Below</h3>
-            <textarea id="comments" name="comments" cols="80" rows="10" placeholder="Type your comments here"></textarea>
+            <textarea class="comments" id="comments" name="comments" cols="20" rows="10" placeholder="Type your comments here"></textarea>
             <p>Important: Please remember to include pictures of any error messages or codes that the system is giving you.</p>
             <!-- <input type="submit" value="Create Ticket"> -->
             <button class="button button--go" onclick="sendForm()">Create Ticket</button>
@@ -203,9 +268,12 @@
         </div>
 
         <!-- Footer -->
-        <div class="foot">
-        <footer>All Uniform Wear    Questions: techsupport@alluniformwear.com  xt: 9106</footer>
-        </div>
+        <footer class="top-header">
+            <div class="wrapper-form--footer">
+                Questions: techsupport@alluniformwear.com  xt: 9106
+            </div>
+        </footer>
+        
 
         <script src="tech-form.js"></script>
 
